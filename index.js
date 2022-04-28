@@ -23,3 +23,7 @@ const webTechs = [
 ];
 
 const mernStack = ['MongoDB', 'Express', 'React', 'Node'];
+
+for (let i = 0; i < countries.length; i++) {
+  console.log(countries[i]);
+}
