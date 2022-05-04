@@ -157,21 +157,31 @@ for (let item of webTechs) {
 
 var fruitsArray = ['banana', 'orange', 'mango', 'lemon'];
 
-// function customReverse(originalArray) {
-//   let leftIndex = 0;
-//   let rightIndex = originalArray.length - 1;
+function customReverse(arr) {
+  let leftP = 0;
+  let rightP = arr.length - 1;
 
-//   while (leftIndex < rightIndex) {
-//     // Swap the elements with temp variable
-//     let temp = originalArray[leftIndex];
-//     originalArray[leftIndex] = originalArray[rightIndex];
-//     originalArray[rightIndex] = temp;
+  while (leftP < rightP) {
+    let temp = arr[leftP];
+    arr[leftP] = arr[rightP];
+    arr[rightP] = temp;
 
-//     // Move indices to the middle
-//     leftIndex++;
-//     rightIndex--;
-//   }
-// }
-
+    leftP++;
+    rightP--;
+  }
+}
 customReverse(fruitsArray);
 console.log(fruitsArray);
+const fullStack = [
+  ['HTML', 'CSS', 'JS', 'React'],
+  ['Node', 'Express', 'MongoDB'],
+];
+
+let techUppercase = [].concat(...fullStack).map((item) => item.toUpperCase());
+console.log(techUppercase);
+
+let newCountry = [...countries];
+console.log(newCountry);
+
+let sortedCountries = newCountry.sort();
+console.log(sortedCountries);
