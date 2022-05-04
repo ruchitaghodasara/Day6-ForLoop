@@ -87,3 +87,91 @@ for (var i = 0; i < 6; i++) {
 }
 
 console.log(color);
+
+function random_rgba() {
+  var o = Math.round,
+    r = Math.random,
+    s = 255;
+  return (
+    'rgba(' +
+    Math.round(Math.random() * 255) +
+    ',' +
+    Math.round(Math.random() * 255) +
+    ',' +
+    Math.round(Math.random() * 255) +
+    ',' +
+    Math.random().toFixed(1) +
+    ')'
+  );
+}
+
+var color = random_rgba();
+
+console.log(color);
+
+let countryUppercase = countries.map((item) => item.toUpperCase());
+console.log(countryUppercase);
+
+let counLen = [];
+for (let coun of countries) {
+  counLen.push(coun.length);
+}
+
+console.log(counLen);
+
+let counArray = [];
+for (let coun of countries) {
+  counArray.push([coun, coun.slice(0, 3).toUpperCase(), coun.length]);
+}
+
+console.log(counArray);
+
+let substringArray = [];
+let subString = 'land';
+for (let subStr of countries) {
+  if (subStr.indexOf(subString) !== -1) {
+    substringArray.push(subStr);
+  }
+}
+
+console.log(substringArray);
+
+function findLongest(str) {
+  let longStr = 0;
+  let strVal;
+  for (let i = 0; i < webTechs.length; i++) {
+    if (webTechs[i].length > longStr) {
+      longStr = webTechs[i].length;
+      strVal = webTechs[i];
+    }
+  }
+
+  console.log(strVal);
+}
+
+findLongest(webTechs);
+
+for (let item of webTechs) {
+  console.log(item);
+}
+
+var fruitsArray = ['banana', 'orange', 'mango', 'lemon'];
+
+// function customReverse(originalArray) {
+//   let leftIndex = 0;
+//   let rightIndex = originalArray.length - 1;
+
+//   while (leftIndex < rightIndex) {
+//     // Swap the elements with temp variable
+//     let temp = originalArray[leftIndex];
+//     originalArray[leftIndex] = originalArray[rightIndex];
+//     originalArray[rightIndex] = temp;
+
+//     // Move indices to the middle
+//     leftIndex++;
+//     rightIndex--;
+//   }
+// }
+
+customReverse(fruitsArray);
+console.log(fruitsArray);
