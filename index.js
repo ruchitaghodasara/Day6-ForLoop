@@ -55,3 +55,35 @@ for (let i = 0; i < 100; i++) {
   }
 }
 console.log(result);
+
+let randomArr = [];
+for (let i = 0; i < 5; i++) {
+  randomArr.push(Math.random());
+}
+
+console.log(randomArr);
+let r = (Math.random() + 1).toString(36).substring(6);
+console.log(r);
+
+function generateString(value) {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+
+  let resultString = '';
+  const charLength = characters.length;
+  for (let i = 0; i < value; i++) {
+    resultString += characters.charAt(Math.floor(Math.random() * charLength));
+  }
+  return resultString;
+}
+
+generateString(5);
+
+console.log((Math.random() * 1e32).toString(36));
+var letters = '0123456789ABCDEF';
+
+var color = '#';
+for (var i = 0; i < 6; i++) {
+  color += letters[Math.floor(Math.random() * 16)];
+}
+
+console.log(color);
